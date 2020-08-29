@@ -1,8 +1,13 @@
-def main():
-    pass
+# def main():
+#     pass
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
+
+def continuation():
+  print("press ENTER to continue")
+  continue1 = input()
+
 
 
 # modules = {"create (I)nput object":"I","(S)trings":"S"}
@@ -35,4 +40,4 @@ def strmenu():
     import Strings.py
     # for i in strings:
     #     print("\n\t",i)
-strmenu()
+

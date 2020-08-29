@@ -10,27 +10,25 @@ from navigation import continuation
 #   exit()
 
 
-def inputs():
-  print("==inputs==")
-  print("enter a string to test")
-  teststring =  "test sTRINg\t now with a tab string"
-  print("testing for:",teststring)
-  print("enter a width of characters")
+# def inputs():
+#   print("==inputs==")
+#   print("enter a string to test")
+#   teststring =  "test sTRINg\t now with a tab string"
+#   print("testing for:",teststring)
+#   print("enter a width of characters")
 
 
-print("enter a character to check for")
-character = "t"
-print("character set to:",character)
+# print("enter a character to check for")
+# character = "t"
+# print("character set to:",character)
 
-
-
+string = "TeStStrIng"
 
 
 #STRING OPERATIONS#
 def capitalize_the_string(cap):
   op = "Capitalized:"
   print(op,cap.capitalize())
-
 def string_ending(evalue):
   print("enter a value which the string might end:\n")
   if not evalue:
@@ -41,22 +39,20 @@ def string_ending(evalue):
     print("yes")
   else:
     print("no")
-
 def stringcasefold(sring):
   print("casefolding can be described as an \"aggressive\" lower() method which conversts strings to a state called casefolded where they can be matched without regard to case\n enter a tring to casefold:")
   string = input()
   casefolded = string.casefold()
   print("casefolded", casefolded)
-
 def centering(string):
   def width_check(trialwidth):
-  if int(trialwidth) > len(teststring):
-    print("width set to:", trialwidth)
-    return trialwidth
-  else:
-    print("please select a number larger than:", len(teststring))
-    trialwidth = input()
-    return width_check(trialwidth)
+    if int(trialwidth) > len(teststring):
+      print("width set to:", trialwidth)
+      return trialwidth
+    else:
+      print("please select a number larger than:", len(teststring))
+      trialwidth = input()
+      return width_check(trialwidth)
   print("lets look at how to center a string.\n the center method takes your string and places it in the center of the number of characters you input, and uses the character you give it (as a second input) for padding\n for example how about you input a number of characters and pick a character for padding...")
   print("\nnumber of characters in which to center your string")
   trialwidth = input()
@@ -65,7 +61,6 @@ def centering(string):
   padder = input()
   print("great now we are going to run string.center(width,padding)\n \n")
   print(string.center(width,padder))
-
 def charcount():
   print("lets look at the method used to count characters in a string\n for this you will basically just run string.count(character)")
   print("like always lets start with your inputs, here we will need a string, and a character for the count method to look for and tally\n lets start with your string:\n")
@@ -74,81 +69,57 @@ def charcount():
   char = input()
   print("now we're just going to run string.count(character) and it should tell you how many there are:\n",string.count(character))
   print("\n this means there are",string.count(character)," ",character,"'s in your string:",string)
-
 def encoding():
   print("enter a string:")
   string = input()
   print(" now we'll run string.encode(encoding = \"utf-8\", errors=\"strict\"), on your string",string.encode(encoding = "utf-8", errors="strict"))
-
-def capitalize(string)
+def capitalize(string):
   print("here is how to capitalize your string using string.capitalise()",string.capitalize())
-
-def ending(string)
+def ending(string):
   ending = string_ending(string)
-  
-
-string_ending(teststring)
-print("expand tabs:", teststring.expandtabs(tabsize=32))
-print("but is",evalue,"in",teststring,"? the answer might suprise you...")
-
-def infunct(evalue,teststring,):
+def expandtabs(string):
+  print("expand tabs:", teststring.expandtabs(tabsize=32))
+def infunct(evalue,teststring):
   if evalue in teststring:
     print("yes, yes it is")
   else:
     print("no, no its not")
-
 def indexfunct(string):
   print("lets use index to look for the letter a, where is the first one?")
   try:
     print("answer, character",string.index("a"))
   except ValueError:
     return print("there are none, this has been an example of handling something that throws a value error.")
-
 def a(tempstring):
   if tempstring.isalnum() == True:
     aln = "is"
   else:
     aln = "is not"
   print("the string",aln,"alphanumeric characters ONLY")
-a(teststring)
-
 def alphatest(tempstring):
   if tempstring.isalpha() == True:
     alp = "is"
   else:
     alp = "is not"
   print("the string",alp,"comprised of only alphabetical characters")
-
-def alphatest(tempstring):
-  if tempstring.isascii() == True:
-    asc = "is"
-  else:
-    asc = "is not"
-  print("the string",asc,"comprised of only alphabetical characters")
-
 def asciitest(tempstring):
   if tempstring.isascii() == True:
     asc = "is"
   else:
     asc = "is not"
   print("the string",asc,"comprised of only valid ascii characters or may be empty")
-
 def decimaltest(tempstring):
   if tempstring.isdecimal() == True:
     dec = "is"
   else:
     dec = "is not"
   print("the string",dec,"made up of only decimal characters")
-
-
 def digittest(tempstring):
   if tempstring.isdigit() == True:
     dig = "is"
   else:
     dig = "is not"
   print("the string",dig,"made up of a digit characters")
-
-
 def isidtest(tempstring):
   print("some things like str and int may be identifiers, is the string an identifier?")
   if tempstring.isidentifier() == True:
@@ -156,8 +127,6 @@ def isidtest(tempstring):
   else:
     idtest = "heck no, it isn't"
   print(idtest)
-
-
 def lowertest(tempstring):
   print("can you let me know if all the letters are lowercase?")
   if tempstring.islower() == True:
@@ -165,34 +134,25 @@ def lowertest(tempstring):
   else:
     lowertest = "I can, and they are not."
   print(lowertest)
-
 def lowercheck(string):
   if string.islower() == True:
     print("the string is in lowercase")
   else:
     print("the string has an uppercase letter or no letters at all!")    
-
 def prtcheck(string):
   if string.isprintable() == True:
     print("it can be printed")
   else:
     print("The string cannot be printed =\(") 
-
 def spacecheck(string):
   if string.isspace() == True:
     print("you cant trick me, the whole thing is",string.count(" "),"spaces!")
-
 def titlecheck(string):
   if string.istitle():
     print("This String Qualifies As A \"Title Card\" Meaning The First Letter In Each Word Is capitalised.")
-
 def uppercheck(string):
   if string.isupper():
     print("your string has atleast one cased letter, and all of the cased letters are uppercase")
-
-
-
-
 def joindynamics(string):
   print("play around with joining iterable strings! \n here enter the value for string1")
   string1 = input()
@@ -208,8 +168,6 @@ def joindynamics(string):
   print(string3)
   print(string4.join(string3))
   print(string4.join(string4.join(string3)))
-
-
 def just(string):
   print("Lets look at some JUSTIFICATION, python has two string methods: string.ljust and string.rjust, see what they do to your input string:")
   print(string.ljust(15,"="))
@@ -225,8 +183,7 @@ def just(string):
     print("and select a type of character to use to justify the string")
     char = str(input())
     print("now we'll run string.ljust(number, character) string.rjust(number character) ")
-    print(string1.ljust(num,char),string1.rjust(num,char))  
-
+    print(string1.ljust(num,char),string1.rjust(num,char)) 
 def convlower(string):
   print("now we'll convert your string to lowercase using string.lower() this is relatively simple")
   print("\n",string.lower())
@@ -236,13 +193,42 @@ def convlower(string):
   for i in elipsis:
     print(".")
   print("if youre into that kinda thing")
-
 def testlstrip(string):
   print("lstrip removes the leading characters given, here provide a some characters to take off the front of your string:")
   def strip(string):
     strip = input()
     print(string.lstrip(strip))
   strip(string)
+
+capitalize_the_string(string)
+string_ending(string)
+stringcasefold(string)
+centering(string)
+charcount(string)
+encoding(string)
+capitalizeending(string)
+expandtabsinfunct(string)
+indexfunct(string)
+a(string)
+alphatest(string)
+asciitest(string)
+decimaltest(string)
+digittest(string)
+isidtest(string)
+lowertest(string)
+lowercheck(string)
+prtcheck(string)
+spacecheck(string)
+titlecheck(string)
+uppercheck(string)
+joindynamics(string)
+just(string)
+convlower(string)
+testlstrip(string)
+
+
+
+
 
 ## DO GET TRANS AND STR.TRANSLATE
 
